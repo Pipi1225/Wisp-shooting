@@ -20,20 +20,34 @@
 <br><br>**Movement:**
 <br>Press A/Left arrow key and D/Right arrow key to move around.
 
-<br>Press Backspace to jump.
+<br>![Movement-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/fc156363-c1a6-4c82-9410-895e16a78a29)
 
+<br>Press Backspace to jump.
 <br>While jumping, press Backspace again to double jump.
 
+<br>![Jump-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/0a16c0c8-8951-4718-a7a0-3c28baef31a9)
+
 <br>Press Left Ctrl to dash (While dashing, you cannot perform other actions and are vulnerable to damage).
+
+<br>![Dash-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/32bb2111-0cb3-4147-8aec-f5d50c4308fe)
 
 <br><br>**Attack movement:**
 <br>Press Z to slash (melee attack).
 
+<br>![MeleeAttack-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/ce1ea0ae-a64f-4c18-b979-cf0ef6f6733c)
+
 <br>Press Right Mouse Button to create a projectile of light (You can also create projectile while moving).
+
+<br>![Projectile-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/ea5fca4c-2ee1-4ad7-b0b0-493ffd2afa33)
 
 <br>Only 4 projectiles can exist at the same time. If you create a new one while there are already 4, the first one will explode immediately.
 
+<br>![Limit-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/72b429dd-b439-4393-8175-fd6386776161)
+
 <br>Hold Left Mouse Button to pull a projectile. Its trajectory is display on the screen. You can change direction and how much force applied to it by changing your cursor after clicking (The force applied to the projectile has a limit).
+
+<br>![Hold-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/0a614f17-abee-4525-99dc-2a5eb658baf0)
+<br>![Fly-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/9c7838d0-e0e4-4024-82ee-c5662f8c048c)
 
 <br><br>**Fighting Mechanic:**
 <br>You have 100 HP. Once your HP reach 0, the game is over.
