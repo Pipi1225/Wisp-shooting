@@ -60,3 +60,5 @@
 <br>Blop: hovers toward you and attacks with its spikes. Each hit will reduce your HP by 10. (+30 point)
 
 <br>After you kill a monster, there is 10% chance that it will drop a health potion. Touch the potion to restore 40 HP (Up to a maximum of 100 HP).
+
+<br><br>**Skill Tree:(will be added in the future)**
