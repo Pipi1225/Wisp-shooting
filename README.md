@@ -49,7 +49,7 @@
 <br>![Hold-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/0a614f17-abee-4525-99dc-2a5eb658baf0)
 <br>![Fly-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/9c7838d0-e0e4-4024-82ee-c5662f8c048c)
 
-<br><br>**Fighting Mechanic:**
+<br><br>**Enemies Type:**
 <br>You have 100 HP. Once your HP reach 0, the game is over.
 <br>There will be 3 types of enemies (more will be added the future):
 
