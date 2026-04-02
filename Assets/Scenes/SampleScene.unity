@@ -2956,7 +2956,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1880946064}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.91061455
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -18777,7 +18777,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 683600049}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9230769
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -18945,7 +18945,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.8926113, y: -1.5887977}
+  m_Offset: {x: 5.603294, y: -1.5887977}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -18956,7 +18956,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.994371, y: 0.07974887}
+  m_Size: {x: 12.415734, y: 0.07974887}
   m_EdgeRadius: 0
 --- !u!4 &1461731205
 Transform:
@@ -20860,6 +20860,10 @@ PrefabInstance:
       propertyPath: inventoryUI
       value: 
       objectReference: {fileID: 1813441407}
+    - target: {fileID: 4927038661326777634, guid: b996ee3aea01ed54baa5bcd2b44ae519, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 1941748924
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
