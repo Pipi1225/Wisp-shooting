@@ -32,8 +32,7 @@ public class UI_Shop : MonoBehaviour
 
         for (int i = 0; i < maximumShopSize; i++)
         {
-            UI_Item obj = Instantiate(itemPrefab);
-            obj.transform.SetParent(contentPanel);
+            UI_Item obj = Instantiate(itemPrefab, contentPanel, false);
             itemList.Add(obj);
             obj.OnItemClicked += HandleItemSelection;
             obj.OnRightMouseBtnClick += HandleBuyAction;
@@ -187,6 +186,7 @@ public class UI_Shop : MonoBehaviour
         anim.SetBool("Shopping", true);
         itemDescription.ResetDescription();
         active = true;
+        moveable = true;
         shopData = shopData_NPC;
         shopData.OnInventoryUpdated += UpdateInventoryUI;
         currentShopSize = shopData.size;

@@ -14,11 +14,15 @@ public class UI_Inventory : MonoBehaviour
     [SerializeField] private List<UI_Item> itemList;
 
     [SerializeField] private int currentItem;
-    [SerializeField] private int numberOfItem;
+    [SerializeField] private int maximumInventorySize;
+    [SerializeField] private int currentInventorySize;
+
+    [SerializeField] private int columns;
+
     private bool active;
     private Animator anim;
     private bool moveable;
-    [SerializeField] private int key;
+    [SerializeField] private int key; 
 
     void Awake()
     {
@@ -26,11 +30,21 @@ public class UI_Inventory : MonoBehaviour
         itemList = new List<UI_Item>();
         itemDescription.ResetDescription();
 
-        for (int i = 0; i < numberOfItem; i++)
+        currentInventorySize = playerInventoryData.size;
+        for (int i = 0; i < maximumInventorySize; i++)
         {
-            UI_Item obj = Instantiate(itemPrefab);
-            obj.transform.SetParent(contentPanel);
+            UI_Item obj = Instantiate(itemPrefab, contentPanel, false);
+
             itemList.Add(obj);
+            if (i < currentInventorySize)
+            {
+                itemList[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                itemList[i].gameObject.SetActive(false);
+            }
+
             obj.OnItemClicked += HandleItemSelection;
             obj.OnItemBeginDrag += HandleBeginDrag;
             obj.OnItemDroppedOn += HandleSwap;
@@ -53,9 +67,9 @@ public class UI_Inventory : MonoBehaviour
                 currentItem += key;
                 if (currentItem < 0)
                 {
-                    currentItem += numberOfItem;
+                    currentItem += currentInventorySize;
                 }
-                currentItem = currentItem % numberOfItem;
+                currentItem = currentItem % currentInventorySize;
 
                 moveable = false;
                 Invoke("Cooldown", 0.15f);
@@ -116,11 +130,11 @@ public class UI_Inventory : MonoBehaviour
         }
         else if (up)
         {
-            key = -5;
+            key = -columns;
         }
         else if (down)
         {
-            key = 5;
+            key = columns;
         }
         else
         {
@@ -141,29 +155,29 @@ public class UI_Inventory : MonoBehaviour
         }
         prevItem = item;
 
-        currentItem = getIndex(item);
+        currentItem = itemList.IndexOf(item);
         item.Select();
         HandleDescriptionRequest(currentItem);
     }
 
     private void HandleBeginDrag(UI_Item item)
     {
-        
+        throw new System.NotImplementedException();
     }
 
     private void HandleEndDrag(UI_Item item)
     {
-        
+        throw new System.NotImplementedException();
     }
 
     private void HandleSwap(UI_Item item)
     {
-        
+        throw new System.NotImplementedException();
     }
 
     private void HandleBuyAction(UI_Item item)
     {
-        
+        throw new System.NotImplementedException();
     }
 
     private void HandleDescriptionRequest(int itemIndex)
@@ -189,6 +203,7 @@ public class UI_Inventory : MonoBehaviour
         anim.SetBool("Search_Inventory", true);
         itemDescription.ResetDescription();
         active = true;
+        moveable = true;
         playerInventoryData.OnInventoryUpdated += UpdateInventoryUI;
 
         foreach (var item in playerInventoryData.getCurrentInventoryState())
@@ -210,6 +225,7 @@ public class UI_Inventory : MonoBehaviour
     public void Hide()
     {
         anim.SetBool("Search_Inventory", false);
+        playerInventoryData.OnInventoryUpdated -= UpdateInventoryUI;
         active = false;
     }
 
@@ -219,19 +235,6 @@ public class UI_Inventory : MonoBehaviour
         {
             item.Deselect();
         }
-    }
-
-    private int getIndex(UI_Item obj)
-    {
-        for (int i = 0; i < numberOfItem; i++)
-        {
-            if (obj == itemList[i])
-            {
-                return(i);
-            }
-        }
-
-        return(-1);      
     }
 
     private void updateData(int keyIndex, Sprite newSprite, int newQuantity, bool stackable)
