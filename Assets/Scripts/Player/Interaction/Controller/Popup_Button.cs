@@ -6,6 +6,7 @@ using System;
 
 public class Popup_Button : MonoBehaviour
 {
+    [SerializeField] private Player_Controller player;
     [SerializeField] private TMP_Text buttonText;
     [SerializeField] private string button;
     [SerializeField] private bool poped = false;
@@ -16,6 +17,7 @@ public class Popup_Button : MonoBehaviour
 
     private void Awake()
     {
+        player = GetComponentInParent<Player_Controller>();
         anim = GetComponent<Animator>();
     }
 
@@ -68,9 +70,11 @@ public class Popup_Button : MonoBehaviour
 
     public void removeInteratable(Interactable_Object interactable)
     {
+        player.StopAction();
         interactable.stopInteract();
         interactableStack.Remove(interactable);
         currentInteractable = null;
+        
         if (interactableStack.Count > 0)
         {
             currentInteractable = interactableStack[interactableStack.Count - 1];

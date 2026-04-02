@@ -202,7 +202,7 @@ public class Player_Controller : MonoBehaviour
         }
     }
 
-    private void StopAction()
+    public void StopAction()
     {
         if (inAction == Action.Inventory)
         {
