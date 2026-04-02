@@ -2796,7 +2796,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mua \u0111i m\xE1"
+  m_text: BUY IT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19886,7 +19886,9 @@ MonoBehaviour:
   contentPanel: {fileID: 369945080}
   itemList: []
   currentItem: 0
-  numberOfItem: 20
+  maximumInventorySize: 40
+  currentInventorySize: 0
+  columns: 5
   key: 0
 --- !u!95 &1813441408
 Animator:
@@ -20617,7 +20619,9 @@ MonoBehaviour:
   itemList: []
   prevItem: {fileID: 0}
   currentItem: 0
-  numberOfItem: 30
+  maximumShopSize: 30
+  currentShopSize: 0
+  columns: 5
   key: 0
 --- !u!95 &2102543481
 Animator:
@@ -20955,6 +20959,10 @@ PrefabInstance:
     - target: {fileID: 2669687242404866786, guid: 92b45738d8504114bb870c950a2c4b28, type: 3}
       propertyPath: m_Name
       value: InventorySlotUIA
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669687242404866786, guid: 92b45738d8504114bb870c950a2c4b28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
