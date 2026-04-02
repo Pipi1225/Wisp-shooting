@@ -11,7 +11,7 @@ namespace Inventory.Model
         [SerializeField] private List<InventoryItem> inventoryItems;
 
         [field: SerializeField]
-        public int size {get; private set; } = 15;
+        public int size { get; private set; } = 15;
         public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated;
 
         public void Initialize()
@@ -69,35 +69,51 @@ namespace Inventory.Model
             }
 
             obj.quantity -= 1;
+            if (obj.quantity <= 0) 
+            {
+                inventoryItems[item_index] = InventoryItem.getEmptyItem();
+            }
+            else 
+            {
+                inventoryItems[item_index] = obj;
+            }
 
-            inventoryItems[item_index] = obj;
             informAboutChanges();
             return true;
         }
         
-        public void buyItem(InventoryItem boughtItem, int quantity = 1)
+        public bool buyItem(InventoryItem boughtItem, int quantity = 1)
         {
             Debug.Log("Buying item: " + boughtItem.item.itemName + " x" + quantity);
+
+            if (boughtItem.item.stackable)
+            {
+                for (int i = 0; i < size; i++)
+                {
+                    InventoryItem obj = inventoryItems[i];
+                    if (!obj.empty && obj.item == boughtItem.item)
+                    {
+                        obj.quantity += quantity;
+                        inventoryItems[i] = obj;
+                        informAboutChanges();
+                        return true;
+                    }
+                }
+            }
 
             for (int i = 0; i < size; i++)
             {
                 InventoryItem obj = inventoryItems[i];
-
-                if (!obj.empty && obj.item == boughtItem.item && obj.item.stackable)
-                {
-                    obj.quantity += quantity;
-                    inventoryItems[i] = obj;
-                    informAboutChanges();
-                    return;
-                }
-
                 if (obj.empty)
                 {
                     inventoryItems[i] = boughtItem.changeQuantity(quantity);
                     informAboutChanges();
-                    return;
+                    return true;
                 }
             }
+
+            Debug.Log("Not enough slot in inventory. Buy failed: " + boughtItem.item.itemName + " x" + quantity);
+            return false;
         }
 
         private void informAboutChanges()

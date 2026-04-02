@@ -14,7 +14,11 @@ public class UI_Shop : MonoBehaviour
     [SerializeField] private List<UI_Item> itemList;
     [SerializeField] private UI_Item prevItem;
     [SerializeField] private int currentItem;
-    [SerializeField] private int numberOfItem;
+    [SerializeField] private int maximumShopSize;
+    [SerializeField] private int currentShopSize;
+
+    [SerializeField] private int columns;
+
     private bool active;
     private Animator anim;
     private bool moveable;
@@ -26,7 +30,7 @@ public class UI_Shop : MonoBehaviour
         itemList = new List<UI_Item>();
         itemDescription.ResetDescription();
 
-        for (int i = 0; i < numberOfItem; i++)
+        for (int i = 0; i < maximumShopSize; i++)
         {
             UI_Item obj = Instantiate(itemPrefab);
             obj.transform.SetParent(contentPanel);
@@ -50,9 +54,9 @@ public class UI_Shop : MonoBehaviour
                 currentItem += key;
                 if (currentItem < 0)
                 {
-                    currentItem += numberOfItem;
+                    currentItem += currentShopSize;
                 }
-                currentItem = currentItem % numberOfItem;
+                currentItem = currentItem % currentShopSize;
 
                 moveable = false;
                 Invoke("Cooldown", 0.15f);
@@ -113,11 +117,11 @@ public class UI_Shop : MonoBehaviour
         }
         else if (up)
         {
-            key = -5;
+            key = -columns;
         }
         else if (down)
         {
-            key = 5;
+            key = columns;
         }
         else
         {
@@ -138,7 +142,7 @@ public class UI_Shop : MonoBehaviour
         }
         prevItem = item;
 
-        currentItem = getIndex(item);
+        currentItem = itemList.IndexOf(item);
         item.Select();
         HandleDescriptionRequest(currentItem);
     }
@@ -163,14 +167,18 @@ public class UI_Shop : MonoBehaviour
 
     private void HandleBuyAction(UI_Item item)
     {
-        
+        throw new System.NotImplementedException();
     }
 
     public void buyItem()
     {
-        if (shopData.lostItem(currentItem))
+        InventoryItem itemToBuy = shopData.getItemAt(currentItem);
+
+        if (itemToBuy.empty) return;
+
+        if (playerInventoryData.buyItem(itemToBuy))
         {
-            playerInventoryData.buyItem(shopData.getItemAt(currentItem));
+            shopData.lostItem(currentItem);
         }
     }
 
@@ -181,6 +189,19 @@ public class UI_Shop : MonoBehaviour
         active = true;
         shopData = shopData_NPC;
         shopData.OnInventoryUpdated += UpdateInventoryUI;
+        currentShopSize = shopData.size;
+
+        for (int i = 0; i < itemList.Count; i++)
+        {
+            if (i < currentShopSize)
+            {
+                itemList[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                itemList[i].gameObject.SetActive(false);
+            }
+        }
 
         foreach (var item in shopData.getCurrentInventoryState())
         {
@@ -201,6 +222,7 @@ public class UI_Shop : MonoBehaviour
     public void Hide()
     {
         anim.SetBool("Shopping", false);
+        shopData.OnInventoryUpdated -= UpdateInventoryUI;
         active = false;
     }
 
@@ -210,19 +232,6 @@ public class UI_Shop : MonoBehaviour
         {
             item.Deselect();
         }
-    }
-
-    private int getIndex(UI_Item obj)
-    {
-        for (int i = 0; i < numberOfItem; i++)
-        {
-            if (obj == itemList[i])
-            {
-                return(i);
-            }
-        }
-
-        return(-1);      
     }
 
     private void updateData(int keyIndex, Sprite newSprite, int newQuantity, bool stackable)
