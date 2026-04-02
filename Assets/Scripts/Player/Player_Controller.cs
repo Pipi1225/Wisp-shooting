@@ -151,12 +151,12 @@ public class Player_Controller : MonoBehaviour
                     inAction = Action.Inventory;
                 }
 
-                if (obj != null &&Input.GetKeyDown(obj.getKey()))
+                if (obj != null && Input.GetKeyDown(obj.getKey()))
                 {
-                    pressed = true;
                     stopMovement();
                     obj.startInteract();
                     inAction = Action.Others;
+                    popupButton.press();
                 }
             }
 

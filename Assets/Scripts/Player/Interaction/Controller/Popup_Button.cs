@@ -64,6 +64,7 @@ public class Popup_Button : MonoBehaviour
         button = interactable.getKeyInteract();
         currentInteractable = interactable;
         setKey();
+        resetPress();
         popUp();
         return button;
     }
@@ -83,6 +84,7 @@ public class Popup_Button : MonoBehaviour
         }
         else
         {
+            resetPress();
             popDown();
         }
     }
