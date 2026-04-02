@@ -193,8 +193,9 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   invicibleTimer: 0.01
+  offsetStack: 0.3
   baseCollider: {fileID: 0}
-  drop: {fileID: 0}
+  drop: {fileID: 54792726989589295, guid: 502913c73fbc29c4fbc01699970431de, type: 3}
   pointManager: {fileID: 0}
   dead: 0
   point: 20
