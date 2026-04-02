@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a99e0a47e18e2ad4aa6b3f88a06d4a8a, type: 3}
+  m_Name: StoneFragment_2
+  m_EditorClassIdentifier: 
+  <stackable>k__BackingField: 0
+  <maxStack>k__BackingField: 1
+  itemName: 
+  <description>k__BackingField: 
+  <itemImage>k__BackingField: {fileID: -49507990, guid: ecdce521eb54918449ee4e7b1fe4b434, type: 3}

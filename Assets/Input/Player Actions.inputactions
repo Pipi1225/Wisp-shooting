@@ -1,0 +1,67 @@
+{
+    "name": "Player Actions",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "f5b61530-e887-4f58-acfb-b88a5dedc578",
+            "actions": [
+                {
+                    "name": "Interaction",
+                    "type": "Button",
+                    "id": "b994bb23-504f-4503-af86-c19d42912a49",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cc6c7d0c-3701-4dbb-b50d-c1c719221f1f",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "35060d11-ef8d-49c9-a44f-7986a61d14b9",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0871c976-f93e-4ce4-973c-ec1ada5d9d3a",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa253184-158c-433f-8ebb-69b2d310dd8f",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
