@@ -117,7 +117,12 @@ public class Shoot : MonoBehaviour
             bulletBar.SetTimer();
 
             //Create Animation
-            anim.SetTrigger("IsCreate");
+            AnimatorStateInfo currentState = anim.GetCurrentAnimatorStateInfo(0);
+
+            if (currentState.IsName("Idle"))
+            {
+                anim.SetTrigger("IsCreate");
+            }
         }
     }
 

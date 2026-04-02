@@ -93,7 +93,6 @@ public class Player_Controller : MonoBehaviour
 
             if (!IsAttacking && !anim.GetBool("Air_Attacking") && flag)
             {
-                anim.ResetTrigger("IsCreate");
                 body.velocity = new Vector2(horizontalInput * speed * (float)(0.7), Mathf.Max(body.velocity.y, -30));
 
                 //Jump
