@@ -1,64 +1,95 @@
-# Wisp-shooting
-**Link game:** https://pipi1225.github.io/Wisp-shooting/
+# 🌠 Wisp-Shooting
 
-**Attention:** This game is still under development and play the game in fullscreen for better experience. Have fun!
+> **🎮 [PLAY THE GAME HERE](https://pipi1225.github.io/Wisp-shooting/)**
+> 
+> **Attention:** This game is still under development. Please play the game in fullscreen for the best experience. Have fun!
 
-<br>![image](https://github.com/user-attachments/assets/e1aa1754-92cf-48fa-b904-42ad15da2614)
+![Gameplay Overview](https://github.com/user-attachments/assets/630f9b1f-b896-40b3-84e8-f6d9aff8cef4)
+---
 
-<br>**How the game work:**
-<br>Your goal in this game is to stay alive as long as possible while killing enemies to get points.
+## 🎯 How the Game Works
+Your goal in this game is to stay alive as long as possible while killing enemies to get points. 
+You can start the game by jumping off the cliff.
 
-<br><br>**UI:**
-<br> There will be health bar and projectile counter on the left upper side of your screen.
+## 🖥️ User Interface
+The screen is divided into two main information sections:
 
-<br>![{076D3F3E-405F-498C-BA75-CFAACE74CF1A}](https://github.com/user-attachments/assets/93f6e4fe-fbed-45fe-8e1e-85f5bbce5797)
+* **Top Left:** Health bar, Projectile counter, Projectile cooldown bar, and Dash cooldown bar.
+  
+  <img width="600" alt="Top Left UI Elements" src="https://github.com/user-attachments/assets/ec563692-7c4e-4d5a-8b5b-d0e8a47b5edf" />
 
-<br> And point counter on the right upper side of your screen.
+* **Top Right:** Point counter.
 
-<br>![{576B0FD2-622E-4BED-9E6A-A42BCC776412}](https://github.com/user-attachments/assets/14f8b7ec-c369-4312-8788-925f8c5e09b6)
+  <img width="600" alt="Top Right UI Elements" src="https://github.com/user-attachments/assets/cd5afef5-a90b-43c0-80e9-5ba379fe87d8" />
 
-<br><br>**Movement:**
-<br>Press A/Left arrow key and D/Right arrow key to move around.
+---
 
-<br>![Movement-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/fc156363-c1a6-4c82-9410-895e16a78a29)
+## 🕹️ Movement & Controls
 
-<br>Press Backspace to jump.
-<br>While jumping, press Backspace again to double jump.
+* **Move:** Press `A` / `D` or `Left` / `Right` arrow keys.
+<video src="https://github.com/user-attachments/assets/4a91834a-49b3-4751-8055-d233eb79dd75" controls="controls" muted="muted" autoplay="autoplay" loop="loop"></video>
 
-<br>![Jump-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/0a16c0c8-8951-4718-a7a0-3c28baef31a9)
+* **Jump:** Press `Backspace` to jump. While jumping, press `Backspace` again to perform a **Double Jump**.
+<video src="https://github.com/user-attachments/assets/04a4224a-12eb-4e64-ad67-e32deda33abb" controls="controls" muted="muted" autoplay="autoplay" loop="loop"></video>
 
-<br>Press Left Ctrl to dash (While dashing, you cannot perform other actions and are vulnerable to damage).
+* **Dash:** Press `Left Ctrl` to dash. *(Note: While dashing, you cannot perform other actions and are vulnerable to damage).*
+<video src="https://github.com/user-attachments/assets/25aa730a-8491-4081-86ad-f92d5eb2e8f9" controls="controls" muted="muted" autoplay="autoplay" loop="loop"></video>
 
-<br>![Dash-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/32bb2111-0cb3-4147-8aec-f5d50c4308fe)
+---
 
-<br><br>**Attack movement:**
-<br>Press Z to slash (melee attack).
+## ⚔️ Attack Mechanics
 
-<br>![MeleeAttack-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/ce1ea0ae-a64f-4c18-b979-cf0ef6f6733c)
+* **Melee Attack:** Press `Z` to slash.
+<video src="https://github.com/user-attachments/assets/80b0efa8-c8c5-457e-a166-5162b01b907e" controls="controls" muted="muted" autoplay="autoplay" loop="loop"></video>
 
-<br>Press Right Mouse Button to create a projectile of light (You can also create projectile while moving).
+* **Create Projectile:** Press the `Right Mouse Button` to create a projectile of light (can be cast while moving).
+    * *Limit:* Only **4 projectiles** can exist at the same time. If you create a 5th one, the oldest one will explode immediately.
+<video src="https://github.com/user-attachments/assets/de2e0f8f-773f-4e52-b187-67dbc2dd87ee" controls="controls" muted="muted" autoplay="autoplay" loop="loop"></video>
+<video src="https://github.com/user-attachments/assets/d9668d29-241a-4760-bd03-ccb611b69fd8" controls="controls" muted="muted" autoplay="autoplay" loop="loop"></video>
 
-<br>![Projectile-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/ea5fca4c-2ee1-4ad7-b0b0-493ffd2afa33)
+* **Control Projectile:** Hold the `Left Mouse Button` to pull a projectile. 
+    * Its trajectory will be displayed on the screen. 
+    * Change direction and applied force by moving your cursor after clicking (maximum force is capped).
+<video src="https://github.com/user-attachments/assets/fa470f6d-db6e-469d-95f7-89dee983e6b1" controls="controls" muted="muted" autoplay="autoplay" loop="loop"></video>
+<video src="https://github.com/user-attachments/assets/783b0fbe-70b9-44f5-b709-45bc24bed4e5" controls="controls" muted="muted" autoplay="autoplay" loop="loop"></video>
 
-<br>Only 4 projectiles can exist at the same time. If you create a new one while there are already 4, the first one will explode immediately.
+---
 
-<br>![Limit-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/72b429dd-b439-4393-8175-fd6386776161)
+## 🎒 Inventory & Shop
 
-<br>Hold Left Mouse Button to pull a projectile. Its trajectory is display on the screen. You can change direction and how much force applied to it by changing your cursor after clicking (The force applied to the projectile has a limit).
+* **Shop:** You can open/close the shop inventory by pressing the prompt key when it shows up.
+<video src="https://github.com/user-attachments/assets/e4a460c8-820e-4da3-9176-aa52e5870761" controls="controls" muted="muted" autoplay="autoplay" loop="loop"></video>
 
-<br>![Hold-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/0a614f17-abee-4525-99dc-2a5eb658baf0)
-<br>![Fly-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/9c7838d0-e0e4-4024-82ee-c5662f8c048c)
+* **Inventory:** You can open/close your personal inventory by pressing `I`.
+<video src="https://github.com/user-attachments/assets/9101e97a-7bc3-4d40-b8a7-15c9a875c667" controls="controls" muted="muted" autoplay="autoplay" loop="loop"></video>
 
-<br><br>**Enemies Type:**
-<br>You have 100 HP. Once your HP reach 0, the game is over.
-<br>There will be 3 types of enemies (more will be added the future):
+---
 
-<br>Soldier slime: jumps toward you and hurt you by contact damage. Each hit will reduce your HP by 20. (+20 point)
+## 👾 Enemies & Stats
 
-<br>Ranger slime: jumps toward you until it is within range, then shoots dark energy ball at your position. Each contact damage and projectile will reduce your HP by 10. (+20 point)
+**Player HP:** You start with **100 HP**. Once your HP reaches 0, the game is over. 
 
-<br>Blop: hovers toward you and attacks with its spikes. Each hit will reduce your HP by 10. (+30 point)
+There are currently 5 types of enemies:
 
-<br>After you kill a monster, there is 10% chance that it will drop a health potion. Touch the potion to restore 40 HP (Up to a maximum of 100 HP).
+* 🟢 **Soldier Slime:** Jumps toward you and hurts you by contact damage. 
+    * **Damage:** -20 HP 
+    * **Reward:** +20 points
+* 🏹 **Ranger Slime:** Jumps toward you until within range, then shoots dark energy balls at your position. 
+    * **Damage:** -10 HP (Contact & Projectile) 
+    * **Reward:** +20 points
+* 🦇 **Blop:** Hovers toward you and attacks with its spikes. 
+    * **Damage:** -10 HP 
+    * **Reward:** +30 points
+* 🪰 **Fly:** Flies continuously toward you. It is extremely fragile and will be destroyed in a single hit.
+    * **Damage:** -15 HP
+    * **Reward:** +20 points
+* 💣 **Spawner:** Slowly approaches you. Once it gets close enough, it explodes and leaves behind a hazardous zone that deals continuous damage over time.
+    * **Damage:** -30 HP (Continuous Area of Effect)
+    * **Reward:** +20 points
 
-<br><br>**Skill Tree:(will be added in the future)**
+**Loot Drop:** After killing a monster, there is a **10% chance** it will drop a Health Potion. Touch the potion to restore **40 HP** (Up to the maximum of 100 HP).
+
+---
+
+## 🚀 Future Updates
+* [ ] **Skill Tree System:** Coming soon!
