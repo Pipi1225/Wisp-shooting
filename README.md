@@ -63,6 +63,10 @@ The screen is divided into two main information sections:
 * **Inventory:** You can open/close your personal inventory by pressing `I`.
 <video src="https://github.com/user-attachments/assets/9101e97a-7bc3-4d40-b8a7-15c9a875c667" controls="controls" muted="muted" autoplay="autoplay" loop="loop"></video>
 
+> ⚠️ **Note:** This project is still a work in progress.
+> Current features are limited to basic movement and inventory navigation.
+> Items are placeholders and have no functional gameplay purpose yet.
+
 ---
 
 ## 👾 Enemies & Stats
